@@ -3,4 +3,5 @@ const PotsSchema = new mongoose.Schema({
     title: String,
     decription: String,
 },{timestamps: true})
-export default mongoose.model("Post",PotsSchema)
+const Post = mongoose.models.Post || mongoose.model("Post",PotsSchema)
+export default Post
